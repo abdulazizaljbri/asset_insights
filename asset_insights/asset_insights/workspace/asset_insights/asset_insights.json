@@ -1,0 +1,321 @@
+{
+ "charts": [
+  {
+   "chart_name": "Asset Acquisitions (Monthly)",
+   "label": "Asset Acquisitions (Monthly)"
+  },
+  {
+   "chart_name": "Asset Repair Cost (Monthly)",
+   "label": "Asset Repair Cost (Monthly)"
+  },
+  {
+   "chart_name": "Assets by Category",
+   "label": "Assets by Category"
+  },
+  {
+   "chart_name": "Asset Movements by Purpose",
+   "label": "Asset Movements by Purpose"
+  }
+ ],
+ "content": "[{\"id\": \"1d630f262f\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Asset Insights HQ — مركز قيادة الأصول</b></span>\", \"col\": 12}}, {\"id\": \"e12af1e3fe\", \"type\": \"paragraph\", \"data\": {\"text\": \"Executive BI for Fixed Assets — تقارير تنفيذية حية للأصول الثابتة: السجلات، الإهلاك، العهدة، الصيانة، الإصلاح والاستبعاد.\", \"col\": 12}}, {\"id\": \"2474377a5a\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Asset Insights HQ\", \"col\": 4}}, {\"id\": \"4357e38a11\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Asset Finance HQ\", \"col\": 4}}, {\"id\": \"a7de244526\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"dd2266b526\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Assets\", \"col\": 4}}, {\"id\": \"d126833ab5\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Assets In Maintenance\", \"col\": 4}}, {\"id\": \"6b5e19fc4a\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Assets Sold Or Scrapped\", \"col\": 4}}, {\"id\": \"2c71fe3cc4\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Pending Repairs\", \"col\": 4}}, {\"id\": \"a9f8256160\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Asset Movements (30d)\", \"col\": 4}}, {\"id\": \"e2651217b9\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"27b2f9f769\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h5\\\"><b>📈 Live Charts — الرسوم البيانية الحية</b></span>\", \"col\": 12}}, {\"id\": \"5c949d6879\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Asset Acquisitions (Monthly)\", \"col\": 6}}, {\"id\": \"2e9b7d0e8a\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Asset Repair Cost (Monthly)\", \"col\": 6}}, {\"id\": \"5b9942c42e\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Assets by Category\", \"col\": 6}}, {\"id\": \"c61fa0d890\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Asset Movements by Purpose\", \"col\": 6}}, {\"id\": \"c5cc089860\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"78cdca5cc2\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h5\\\"><b>⚡ Quick Reports — التقارير السريعة</b></span>\", \"col\": 12}}, {\"id\": \"8c755212ba\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Asset Insights HQ\", \"col\": 4}}, {\"id\": \"812fbc36d1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Asset Finance HQ\", \"col\": 4}}, {\"id\": \"20b90858e6\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Asset Register\", \"col\": 4}}, {\"id\": \"98fec69650\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Asset Value Summary\", \"col\": 4}}, {\"id\": \"7617cc7739\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Depreciation Plan\", \"col\": 4}}, {\"id\": \"4f2e6418eb\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Asset Movement Register\", \"col\": 4}}, {\"id\": \"0fabc20848\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Maintenance Schedule\", \"col\": 4}}, {\"id\": \"a6ac08e165\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Maintenance Log Register\", \"col\": 4}}, {\"id\": \"d2432e0dd4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Asset Repair Register\", \"col\": 4}}, {\"id\": \"b364a6e5af\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Asset Value Adjustment Register\", \"col\": 4}}, {\"id\": \"96e69f7182\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Disposal Register\", \"col\": 4}}, {\"id\": \"7282596524\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"End Of Life Alert\", \"col\": 4}}, {\"id\": \"90f2d7de5b\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Asset Ageing\", \"col\": 4}}, {\"id\": \"ca645aa044\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Asset Purchase Register\", \"col\": 4}}, {\"id\": \"9c6d496a84\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"b63c73ac4a\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h5\\\"><b>🗂 Report Groups — مجموعات التقارير</b></span>\", \"col\": 12}}, {\"id\": \"0c413cb11d\", \"type\": \"card\", \"data\": {\"card_name\": \"Asset Registers\", \"col\": 4}}, {\"id\": \"b97f6c2c88\", \"type\": \"card\", \"data\": {\"card_name\": \"Depreciation & Value\", \"col\": 4}}, {\"id\": \"39136450b4\", \"type\": \"card\", \"data\": {\"card_name\": \"Maintenance & Repairs\", \"col\": 4}}]",
+ "creation": "2026-01-01 00:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "dashboard",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Asset Insights",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Registers",
+   "link_count": 5,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Asset Register",
+   "link_count": 0,
+   "link_to": "ai_asset_register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Asset Movement Register",
+   "link_count": 0,
+   "link_to": "ai_asset_movement_register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Disposal Register",
+   "link_count": 0,
+   "link_to": "ai_disposal_register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Asset Purchase Register",
+   "link_count": 0,
+   "link_to": "ai_asset_purchase_register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Asset Value Adjustment Register",
+   "link_count": 0,
+   "link_to": "ai_value_adjustment_register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Depreciation & Value",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Depreciation Plan",
+   "link_count": 0,
+   "link_to": "ai_depreciation_plan",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Asset Value Summary",
+   "link_count": 0,
+   "link_to": "ai_asset_value_summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Asset Ageing",
+   "link_count": 0,
+   "link_to": "ai_asset_ageing",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "End Of Life Alert",
+   "link_count": 0,
+   "link_to": "ai_end_of_life_alert",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Maintenance & Repairs",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Maintenance Schedule",
+   "link_count": 0,
+   "link_to": "ai_maintenance_schedule",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Maintenance Log Register",
+   "link_count": 0,
+   "link_to": "ai_maintenance_log_register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Asset Repair Register",
+   "link_count": 0,
+   "link_to": "ai_repair_register",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-09-12 19:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Asset Insights",
+ "name": "Asset Insights",
+ "number_cards": [
+  {
+   "label": "Total Assets",
+   "number_card_name": "Total Assets"
+  },
+  {
+   "label": "Assets In Maintenance",
+   "number_card_name": "Assets In Maintenance"
+  },
+  {
+   "label": "Assets Sold Or Scrapped",
+   "number_card_name": "Assets Sold Or Scrapped"
+  },
+  {
+   "label": "Pending Repairs",
+   "number_card_name": "Pending Repairs"
+  },
+  {
+   "label": "Asset Movements (30d)",
+   "number_card_name": "Asset Movements (30d)"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "restrict_to_domain": "",
+ "sequence_id": 61.0,
+ "shortcuts": [
+  {
+   "color": "#2490ef",
+   "label": "Asset Insights HQ",
+   "link_to": "asset-insights-hq",
+   "type": "Page",
+   "is_hidden": 0
+  },
+  {
+   "color": "#813bff",
+   "label": "Asset Finance HQ",
+   "link_to": "asset-finance-hq",
+   "type": "Page",
+   "is_hidden": 0
+  },
+  {
+   "color": "#2490ef",
+   "label": "ai_asset_register",
+   "link_to": "Asset Register",
+   "type": "Report",
+   "is_hidden": 0
+  },
+  {
+   "color": "#2490ef",
+   "label": "ai_asset_value_summary",
+   "link_to": "Asset Value Summary",
+   "type": "Report",
+   "is_hidden": 0
+  },
+  {
+   "color": "#2490ef",
+   "label": "ai_depreciation_plan",
+   "link_to": "Depreciation Plan",
+   "type": "Report",
+   "is_hidden": 0
+  },
+  {
+   "color": "#2490ef",
+   "label": "ai_asset_movement_register",
+   "link_to": "Asset Movement Register",
+   "type": "Report",
+   "is_hidden": 0
+  },
+  {
+   "color": "#2490ef",
+   "label": "ai_maintenance_schedule",
+   "link_to": "Maintenance Schedule",
+   "type": "Report",
+   "is_hidden": 0
+  },
+  {
+   "color": "#2490ef",
+   "label": "ai_maintenance_log_register",
+   "link_to": "Maintenance Log Register",
+   "type": "Report",
+   "is_hidden": 0
+  },
+  {
+   "color": "#2490ef",
+   "label": "ai_repair_register",
+   "link_to": "Asset Repair Register",
+   "type": "Report",
+   "is_hidden": 0
+  },
+  {
+   "color": "#2490ef",
+   "label": "ai_value_adjustment_register",
+   "link_to": "Asset Value Adjustment Register",
+   "type": "Report",
+   "is_hidden": 0
+  },
+  {
+   "color": "#2490ef",
+   "label": "ai_disposal_register",
+   "link_to": "Disposal Register",
+   "type": "Report",
+   "is_hidden": 0
+  },
+  {
+   "color": "#2490ef",
+   "label": "ai_end_of_life_alert",
+   "link_to": "End Of Life Alert",
+   "type": "Report",
+   "is_hidden": 0
+  },
+  {
+   "color": "#2490ef",
+   "label": "ai_asset_ageing",
+   "link_to": "Asset Ageing",
+   "type": "Report",
+   "is_hidden": 0
+  },
+  {
+   "color": "#2490ef",
+   "label": "ai_asset_purchase_register",
+   "link_to": "Asset Purchase Register",
+   "type": "Report",
+   "is_hidden": 0
+  }
+ ],
+ "title": "Asset Insights"
+}

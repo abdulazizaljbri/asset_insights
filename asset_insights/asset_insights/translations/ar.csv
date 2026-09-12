@@ -1,0 +1,206 @@
+% of NBV,% من صافي القيمة
++{0} quarters,+{0} أرباع
+Accumulated Depreciation,مجمع الإهلاك
+Actions Performed,الأعمال المنفذة
+Adjustment ID,رقم التعديل
+Adjustments,التعديلات
+Age (Years),العمر (سنوات)
+Age Bucket (Years),نطاق العمر (سنوات)
+ai_asset_ageing,أعمار الأصول
+ai_asset_movement_register,سجل حركة الأصول والعهدة
+ai_asset_purchase_register,سجل شراء الأصول
+ai_asset_register,سجل الأصول التفصيلي
+ai_asset_value_summary,ملخص قيم الأصول
+ai_depreciation_plan,جدول الإهلاك
+ai_disposal_register,سجل الاستبعاد والبيع
+ai_end_of_life_alert,أصول قرب نهاية العمر الإنتاجي
+ai_maintenance_log_register,سجل أعمال الصيانة
+ai_maintenance_schedule,جدول الصيانة الدورية
+ai_repair_register,سجل إصلاحات الأصول
+ai_value_adjustment_register,سجل تعديل قيم الأصول
+Amount,المبلغ
+As Of Date,كشف حتى تاريخ
+Asset,الأصل
+Asset Acquisitions (Monthly),مشتريات الأصول (شهري)
+Asset Ageing,أعمار الأصول
+Asset Categories,فئات الأصول
+Asset Category,فئة الأصول
+Asset Depreciation Schedule,جدول إهلاك الأصول
+Asset Finance HQ,مركز الإهلاك والقيم
+Asset ID,رقم الأصل
+Asset Insights,رؤى الأصول
+Asset Insights HQ,مركز قيادة الأصول
+Asset Insights HQ — مركز قيادة الأصول,Asset Insights HQ — مركز قيادة الأصول
+Asset Location,موقع الأصل
+Asset Maintenance,صيانة الأصول
+Asset Maintenance Log,سجل صيانة الأصول
+Asset Maintenance Team,فريق صيانة الأصول
+Asset Movement Register,سجل حركة الأصول والعهدة
+Asset Movements (30d),حركات الأصول (30 يوم)
+Asset Movements by Purpose,حركات الأصول حسب الغرض
+Asset Name,اسم الأصل
+Asset Purchase Lines,بنود شراء الأصول
+Asset Purchase Register,سجل شراء الأصول
+Asset Register,سجل الأصول التفصيلي
+Asset Registers,سجلات الأصول
+Asset Repair,إصلاح أصول
+Asset Repair Cost (Monthly),تكلفة إصلاح الأصول (شهري)
+Asset Repair Register,سجل إصلاحات الأصول
+Asset Value Adjustment,تعديل قيمة الأصول
+Asset Value Adjustment Register,سجل تعديل قيم الأصول
+Asset Value Summary,ملخص قيم الأصول
+Assets,الأصول
+assets,أصول
+Assets by Category,الأصول حسب الفئة
+Assets In Maintenance,أصول تحت الصيانة
+Assets Nearing End Of Life,أصول قرب نهاية العمر
+Assets Sold Or Scrapped,أصول مباعة أو مستبعدة
+Assigned To,مكلّف إلى
+Available For Use Date,تاريخ الجاهزية للاستخدام
+Average Age,متوسط العمر
+Average Age (Years),متوسط العمر (سنوات)
+Booked,مُرحّل
+Booked Depreciations,الأقساط المُرحّلة
+Booking Status,حالة الترحيل
+Cancelled,ملغي
+Capitalize Repair Cost,رسملة تكلفة الإصلاح
+categories,فئات
+Company,الشركة
+Completed,مكتمل
+Completion Date,تاريخ الإنجاز
+Completion Rate,نسبة الإنجاز
+Count,العدد
+Current Asset Value,القيمة الحالية للأصل
+Custodian,المسؤول / العهدة
+Custodian Name,اسم المسؤول
+Date,التاريخ
+Days Until Due,الأيام حتى الاستحقاق
+Depreciation & Value,الإهلاك والقيم
+Depreciation (12m),الإهلاك (12 شهر)
+Depreciation (Monthly),الإهلاك (شهري)
+Depreciation Amount,قيمة الإهلاك
+Depreciation Method,طريقة الإهلاك
+Depreciation Plan,جدول الإهلاك
+Description,الوصف
+Difference Account,حساب الفرق
+Difference Amount,مقدار الفرق
+Disposal Date,تاريخ الاستبعاد
+Disposal Method,طريقة الاستبعاد
+Disposal NBV (Monthly),صافي قيمة الاستبعاد (شهري)
+Disposal Register,سجل الاستبعاد والبيع
+Disposals,الاستبعادات
+Disposals (12m),الاستبعادات (12 شهر)
+Double Declining Balance,القسط المتناقص المضاعف
+Downtime (days),مدة التوقف (أيام)
+Draft,مسودة
+Due Date,تاريخ الاستحقاق
+Due From,الاستحقاق من
+Due To,الاستحقاق إلى
+End Of Life Alert,أصول قرب نهاية العمر الإنتاجي
+Estimated End Date,تاريخ الانتهاء المتوقع
+Executive BI for Fixed Assets — تقارير تنفيذية حية للأصول الثابتة: السجلات، الإهلاك، العهدة، الصيانة، الإصلاح والاستبعاد.,Executive BI for Fixed Assets — تقارير تنفيذية حية للأصول الثابتة: السجلات، الإهلاك، العهدة، الصيانة، الإصلاح والاستبعاد.
+Failure Date,تاريخ العطل
+Finance Book,الدفتر المالي
+Frequency (months),التكرار (شهور)
+From Custodian,المسؤول المسلِّم
+From Date,من تاريخ
+From Location,من موقع
+gross,إجمالي
+Gross Purchase Amount,قيمة الشراء الإجمالية
+Gross Value,القيمة الإجمالية
+Group By,تجميع حسب
+Include Drafts,تضمين المسودات
+Increase In Asset Life (days),زيادة عمر الأصل (أيام)
+Issue,صرف
+Item,الصنف
+Item Code,رمز الصنف
+Item Name,اسم الصنف
+Journal Entry,القيد المحاسبي
+last 30 days,آخر 30 يوم
+Last Completion Date,تاريخ الإنجاز الأخير
+Lines,البنود
+Location,الموقع
+Log ID,رقم السجل
+Maintenance & Repairs,الصيانة والإصلاحات
+Maintenance Log Register,سجل أعمال الصيانة
+Maintenance Logs,سجلات الصيانة
+Maintenance Schedule,جدول الصيانة الدورية
+Maintenance Status,حالة الصيانة
+Maintenance Tasks,مهام الصيانة
+Maintenance Team,فريق الصيانة
+Maintenance Type,نوع الصيانة
+Manual,يدوي
+months,شهور
+Months Left,الأشهر المتبقية
+Movement ID,رقم الحركة
+Movement Lines,بنود الحركة
+Movements (30d),الحركات (30 يوم)
+Movements by Purpose,الحركات حسب الغرض
+Nearing End Of Life,قرب نهاية العمر
+Net Book Value,صافي القيمة الدفترية
+Net Book Value by Category,صافي القيمة الدفترية حسب الفئة
+Net Book Value by Location,صافي القيمة الدفترية حسب الموقع
+Net Difference,صافي الفرق
+New Asset Value,القيمة الجديدة للأصل
+Next Due Date,موعد الاستحقاق القادم
+No data for the selected filters,لا توجد بيانات للفلاتر المختارة
+Not Categorized,غير مصنف
+Not Specified,غير محدد
+of gross,من الإجمالي
+Overdue,متأخر
+Overdue Maintenance,صيانة متأخرة
+Pending,قيد الانتظار
+Pending Repairs,إصلاحات معلقة
+Performed By,المنفِّذ
+Periodicity,التكرار
+Planned,مخطط
+Posting Date,تاريخ الترحيل
+Purchase Date,تاريخ الشراء
+Purchase Invoice,فاتورة شراء
+Purpose,الغرض
+Qty,الكمية
+Rate,السعر
+Receipt,استلام
+Reference,المرجع
+Refresh,تحديث
+Remaining (bookings),المتبقي (أقساط)
+Repair Cost,تكلفة الإصلاح
+Repair Cost (Monthly),تكلفة الإصلاح (شهري)
+Repair ID,رقم الإصلاح
+Repair Status,حالة الإصلاح
+Repairs,الإصلاحات
+Schedule Date,تاريخ الجدولة
+scheduled bookings,قيد مجدول
+Scheduled bookings,قيد مجدول
+scheduled tasks,مهمة مجدولة
+Scrap Journal Entry,قيد الاستبعاد
+Scrapped,مستبعد (خردة)
+Sold,مبيع
+Status,الحالة
+Straight Line,القسط الثابت
+Submitted,مُرحّل
+Supplier,المورد
+Supplier Name,اسم المورد
+Task,المهمة
+this month,هذا الشهر
+This quarter,هذا الربع
+To Custodian,المسؤول المستلِم
+To Date,إلى تاريخ
+To Location,إلى موقع
+Total Assets,إجمالي الأصول
+Total Depreciation,إجمالي الإهلاك
+Total Depreciations,إجمالي قسط الإهلاك
+Total Repair Cost,إجمالي تكلفة الإصلاح
+Transfer,تحويل
+Transfer and Issue,تحويل وصرف
+View,العرض
+Within,خلال
+Within (months),خلال (شهور)
+within 12 months,خلال 12 شهر
+Workspace,مساحة العمل
+Written Down Value,القيمة الدفترية المتناقصة
+yrs,سنة
+{0} months,{0} شهور
+⚡ Quick Reports — التقارير السريعة,⚡ Quick Reports — التقارير السريعة
+📈 Live Charts — الرسوم البيانية الحية,📈 Live Charts — الرسوم البيانية الحية
+🗂 Report Groups — مجموعات التقارير,🗂 Report Groups — مجموعات التقارير

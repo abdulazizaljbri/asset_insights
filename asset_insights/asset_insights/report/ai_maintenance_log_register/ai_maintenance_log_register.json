@@ -1,0 +1,70 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2026-01-01 00:00:00.000000",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "company",
+   "label": "Company",
+   "fieldtype": "Link",
+   "options": "Company"
+  },
+  {
+   "fieldname": "asset",
+   "label": "Asset",
+   "fieldtype": "Link",
+   "options": "Asset"
+  },
+  {
+   "fieldname": "maintenance_status",
+   "label": "Maintenance Status",
+   "fieldtype": "Select",
+   "options": "\nPlanned\nCompleted\nCancelled\nOverdue"
+  },
+  {
+   "fieldname": "from_date",
+   "label": "From Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "to_date",
+   "label": "To Date",
+   "fieldtype": "Date",
+   "default": "Today"
+  },
+  {
+   "fieldname": "include_drafts",
+   "label": "Include Drafts",
+   "fieldtype": "Check",
+   "default": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2026-09-12",
+ "modified_by": "Administrator",
+ "module": "Asset Insights",
+ "name": "ai_maintenance_log_register",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Asset Maintenance Log",
+ "report_name": "ai_maintenance_log_register",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Auditor"
+  }
+ ]
+}
