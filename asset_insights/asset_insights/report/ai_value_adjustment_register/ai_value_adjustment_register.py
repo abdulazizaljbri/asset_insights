@@ -1,8 +1,9 @@
 # Copyright (c) 2026, Asset Insights Team
 # License: MIT
 # Asset Value Adjustment Register — سجل تعديل قيم الأصول
-# Real v15 fields on `tabAsset Value Adjustment`: date, current_asset_value,
-# new_asset_value, difference_amount, difference_account, journal_entry.
+# Real ERPNext v15.23.1 fields on `tabAsset Value Adjustment`: date,
+# current_asset_value, new_asset_value, difference_amount, journal_entry.
+# (difference_account does not exist in 15.23.1 - added in later versions.)
 # Drafts only when Include Drafts is ticked.
 
 import frappe
@@ -38,7 +39,6 @@ def get_columns():
 		{"label": _("Current Asset Value"), "fieldname": "current_asset_value", "fieldtype": "Currency", "width": 160},
 		{"label": _("New Asset Value"), "fieldname": "new_asset_value", "fieldtype": "Currency", "width": 150},
 		{"label": _("Difference Amount"), "fieldname": "difference_amount", "fieldtype": "Currency", "width": 150},
-		{"label": _("Difference Account"), "fieldname": "difference_account", "fieldtype": "Link", "options": "Account", "width": 190},
 		{"label": _("Journal Entry"), "fieldname": "journal_entry", "fieldtype": "Link", "options": "Journal Entry", "width": 150},
 		{"label": _("Status"), "fieldname": "status", "fieldtype": "Data", "width": 100},
 	]
@@ -60,7 +60,7 @@ def get_data(filters):
 		f"""
 		select va.name, va.asset, va.asset_category, va.date,
 		       va.current_asset_value, va.new_asset_value,
-		       va.difference_amount, va.difference_account,
+		       va.difference_amount,
 		       va.journal_entry, va.docstatus,
 		       a.asset_name as asset_display
 		from `tabAsset Value Adjustment` va
@@ -90,7 +90,6 @@ def get_data(filters):
 			current_asset_value=flt(r.current_asset_value),
 			new_asset_value=flt(r.new_asset_value),
 			difference_amount=diff,
-			difference_account=r.difference_account or "",
 			journal_entry=r.journal_entry or "",
 			status=status,
 		))

@@ -1,10 +1,11 @@
 # Copyright (c) 2026, Asset Insights Team
 # License: MIT
 # End Of Life Alert — أصول قرب نهاية العمر الإنتاجي
-# Estimates remaining useful life from the real v15 finance books child
-# (`tabAsset Finance Book`): total_number_of_depreciations,
-# total_number_of_booked_depreciations (+ asset.opening_number_of_booked_
-# depreciations) and frequency_of_depreciation (months per booking).
+# ERPNext **v15.23.1-verified** fields only (the Asset-level
+# opening_number_of_booked_depreciations / fb.total_number_of_booked_
+# depreciations counters do NOT exist in 15.23.1). Booked depreciation
+# counts are derived from real journal entries on the
+# `tabDepreciation Schedule` child of `tabAsset Depreciation Schedule`.
 # Drafts only when Include Drafts is ticked.
 
 import frappe
@@ -59,12 +60,18 @@ def get_data(filters):
 		f"""
 		select a.name, a.asset_name, a.asset_category, a.location,
 		       a.custodian, a.value_after_depreciation, a.docstatus,
-		       a.opening_number_of_booked_depreciations,
 		       fb.depreciation_method, fb.total_number_of_depreciations,
-		       fb.total_number_of_booked_depreciations,
-		       fb.frequency_of_depreciation, fb.depreciation_start_date
+		       fb.frequency_of_depreciation, fb.depreciation_start_date,
+		       coalesce(booked.booked_count, 0) as booked_count
 		from `tabAsset` a
 		join `tabAsset Finance Book` fb on fb.parent = a.name
+		left join (
+			select ads.asset as asset, count(ds.name) as booked_count
+			from `tabAsset Depreciation Schedule` ads
+			join `tabDepreciation Schedule` ds on ds.parent = ads.name
+			where ads.docstatus = 1 and ds.journal_entry is not null
+			group by ads.asset
+		) booked on booked.asset = a.name
 		WHERE {" AND ".join(conditions)}
 		ORDER BY a.name ASC
 		""",
@@ -80,20 +87,19 @@ def get_data(filters):
 
 	for r in rows:
 		total_dep = cint(r.total_number_of_depreciations)
-		booked = cint(r.opening_number_of_booked_depreciations) + cint(r.total_number_of_booked_depreciations)
+		booked = cint(r.booked_count)
 		frequency = cint(r.frequency_of_depreciation) or 12
 		remaining = max(total_dep - booked, 0)
 		months_left = remaining * frequency
 
-		est_end = None
-		if r.depreciation_start_date:
-			est_end = add_months(getdate(r.depreciation_start_date), total_dep * frequency)
-		elif est_end is None:
-			est_end = add_months(today, months_left)
-
 		# keep only assets ending within the requested window
 		if months_left > filters.within_months:
 			continue
+
+		est_end = add_months(today, months_left)
+		if r.depreciation_start_date:
+			est_end = add_months(getdate(r.depreciation_start_date),
+			                     total_dep * frequency)
 
 		data.append(frappe._dict(
 			name=r.name,
@@ -136,7 +142,7 @@ def get_chart(by_quarter):
 	return {
 		"data": {
 			"labels": [k for k, _cnt in items],
-			"datasets": [{"name": _("Assets"), "values": [v for _k, v in items]}],
+			"datasets": [{"name": _("Assets"), "values": [_cnt for _k, _cnt in items]}],
 		},
 		"type": "bar",
 	}
