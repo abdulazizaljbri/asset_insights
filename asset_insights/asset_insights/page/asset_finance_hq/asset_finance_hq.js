@@ -26,14 +26,14 @@ frappe.pages["asset-finance-hq"].on_page_load = function (wrapper) {
 		["kpi-disposed", __("Disposals (12m)"), "#ec8d30"],
 	];
 
-	const VERSION_MARKER = "Asset Finance HQ • v6";
+	const VERSION_MARKER = "Asset Finance HQ • v7";
 
 	main.innerHTML = `
 		<div class="ai-hq">
 			<div class="ai-controls">
 				<div class="ai-control">
 					<div class="ai-control-label">${__("Company")}</div>
-					<div id="ai-company-wrap"></div>
+					<select id="ai-company" class="form-control"></select>
 				</div>
 				<label class="ai-control ai-switch">
 					<input type="checkbox" id="ai-drafts" checked>
@@ -72,18 +72,29 @@ frappe.pages["asset-finance-hq"].on_page_load = function (wrapper) {
 			<div class="ai-version">${VERSION_MARKER}</div>
 		</div>`;
 
-	// in-body filter bar (always visible - page-head fields are hidden
-	// on some v15 builds, especially under RTL)
-	const company_control = new frappe.ui.form.ControlLink({
-		parent: wrapper.querySelector("#ai-company-wrap"),
-		df: {
-			fieldtype: "Link",
-			options: "Company",
-			fieldname: "company",
-		},
-	});
-	company_control.set_value(frappe.defaults.get_user_default("Company"));
-	company_control.$input.on("change", () => load());
+	// in-body filter bar (always visible, no page-head fields, plain
+	// HTML controls - work on every v15 build, RTL included)
+	const company_select = wrapper.querySelector("#ai-company");
+	frappe.db
+		.get_list("Company", {
+			fields: ["name"],
+			limit_page_length: 0,
+			order_by: "name",
+		})
+		.then((rows) => {
+			const def = frappe.defaults.get_user_default("Company");
+			company_select.innerHTML =
+				`<option value="">${__("All Companies")}</option>` +
+				rows
+					.map(
+						(r) =>
+							`<option value="${frappe.utils.escape_html(r.name)}"${
+								r.name === def ? " selected" : ""
+							}>${frappe.utils.escape_html(r.name)}</option>`
+					)
+					.join("");
+		});
+	company_select.addEventListener("change", () => load());
 	wrapper.querySelector("#ai-drafts").addEventListener("change", () => load());
 
 	let currency = null;
@@ -133,7 +144,7 @@ frappe.pages["asset-finance-hq"].on_page_load = function (wrapper) {
 					report_name: report_name,
 					filters: Object.assign(
 						{
-							company: company_control.get_value() || undefined,
+							company: company_select.value || undefined,
 							include_drafts: document.getElementById("ai-drafts").checked ? 1 : 0,
 						},
 						filters || {}

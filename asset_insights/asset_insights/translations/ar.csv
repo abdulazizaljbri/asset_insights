@@ -18,6 +18,7 @@ ai_maintenance_log_register,سجل أعمال الصيانة
 ai_maintenance_schedule,جدول الصيانة الدورية
 ai_repair_register,سجل إصلاحات الأصول
 ai_value_adjustment_register,سجل تعديل قيم الأصول
+All Companies,كل الشركات
 Amount,المبلغ
 As Of Date,كشف حتى تاريخ
 Asset,الأصل

@@ -136,3 +136,13 @@
 	height: 15px;
 	cursor: pointer;
 }
+
+/* v7: company select */
+.ai-hq .ai-control select {
+	width: 100%;
+	border: none;
+	background: transparent;
+	font-size: 13px;
+	color: var(--ai-text, #1f2733);
+	outline: none;
+}
