@@ -29,6 +29,9 @@ frappe.pages["asset-insights-hq"].on_page_load = function (wrapper) {
 			load();
 		},
 	});
+	if (!drafts_field.get_value()) {
+		drafts_field.set_value(1);
+	}
 
 	page.set_primary_action(__("Refresh"), () => load());
 	page.set_secondary_action(__("Workspace"), () =>
@@ -47,8 +50,11 @@ frappe.pages["asset-insights-hq"].on_page_load = function (wrapper) {
 		["kpi-moves", __("Movements (30d)"), "#ec8d30"],
 	];
 
+	const VERSION_MARKER = "Asset Insights HQ • v5";
+
 	main.innerHTML = `
 		<div class="ai-hq">
+			<div id="ai-hint" class="ai-hint" style="display:none"></div>
 			<div class="ai-kpis">
 				${KPI_SLOTS.map(
 					([id, label, color]) => `
@@ -77,6 +83,7 @@ frappe.pages["asset-insights-hq"].on_page_load = function (wrapper) {
 					<div id="ai-c4"></div>
 				</div>
 			</div>
+			<div class="ai-version">${VERSION_MARKER}</div>
 		</div>`;
 
 	let currency = null;
@@ -151,6 +158,13 @@ frappe.pages["asset-insights-hq"].on_page_load = function (wrapper) {
 				currency = currency || null;
 				set_kpi("kpi-assets", String(count), `${fmt_money(total_gross)} ${__("gross")}`);
 				set_kpi("kpi-nbv", fmt_money(total_nbv), `${rows.length} ${__("categories")}`);
+				const hint = document.getElementById("ai-hint");
+				if (hint) {
+					hint.style.display = count === 0 ? "block" : "none";
+					hint.innerHTML = count === 0
+						? __("No assets found for these filters - run ai_seed_data() from the console or check the selected Company.")
+						: "";
+				}
 
 				const cat_rows = rows.slice().sort((a, b) => (b.nbv || 0) - (a.nbv || 0)).slice(0, 10);
 				render_chart("ai-c1", "bar", cat_rows.map((x) => x.group_value),

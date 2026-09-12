@@ -28,6 +28,9 @@ frappe.pages["asset-finance-hq"].on_page_load = function (wrapper) {
 			load();
 		},
 	});
+	if (!drafts_field.get_value()) {
+		drafts_field.set_value(1);
+	}
 
 	page.set_primary_action(__("Refresh"), () => load());
 	page.set_secondary_action(__("Workspace"), () =>
@@ -46,8 +49,11 @@ frappe.pages["asset-finance-hq"].on_page_load = function (wrapper) {
 		["kpi-disposed", __("Disposals (12m)"), "#ec8d30"],
 	];
 
+	const VERSION_MARKER = "Asset Finance HQ • v5";
+
 	main.innerHTML = `
 		<div class="ai-hq">
+			<div id="ai-fhint" class="ai-hint" style="display:none"></div>
 			<div class="ai-kpis">
 				${KPI_SLOTS.map(
 					([id, label, color]) => `
@@ -76,6 +82,7 @@ frappe.pages["asset-finance-hq"].on_page_load = function (wrapper) {
 					<div id="ai-f4"></div>
 				</div>
 			</div>
+			<div class="ai-version">${VERSION_MARKER}</div>
 		</div>`;
 
 	let currency = null;
@@ -157,6 +164,14 @@ frappe.pages["asset-finance-hq"].on_page_load = function (wrapper) {
 				set_kpi("kpi-accum", fmt_money(accum),
 					`${gross ? ((accum / gross) * 100).toFixed(1) : "0"}% ${__("of gross")}`);
 				set_kpi("kpi-nbv", fmt_money(nbv));
+				const total_count = rows.reduce((a, x) => a + (x.asset_count || 0), 0);
+				const hint = document.getElementById("ai-fhint");
+				if (hint) {
+					hint.style.display = total_count === 0 ? "block" : "none";
+					hint.innerHTML = total_count === 0
+						? __("No assets found for these filters - run ai_seed_data() from the console or check the selected Company.")
+						: "";
+				}
 			})
 			.catch(() => {
 				set_kpi("kpi-gross", "—", "");

@@ -144,6 +144,7 @@ Net Book Value by Location,صافي القيمة الدفترية حسب الم�
 Net Difference,صافي الفرق
 New Asset Value,القيمة الجديدة للأصل
 Next Due Date,موعد الاستحقاق القادم
+No assets found for these filters - run ai_seed_data() from the console or check the selected Company.,لا توجد أصول بهذه الفلاتر - نفّذ ai_seed_data() من الكونسول، أو تحقق من الشركة المختارة.
 No data for the selected filters,لا توجد بيانات للفلاتر المختارة
 Not Categorized,غير مصنف
 Not Specified,غير محدد
@@ -171,8 +172,8 @@ Repair ID,رقم الإصلاح
 Repair Status,حالة الإصلاح
 Repairs,الإصلاحات
 Schedule Date,تاريخ الجدولة
-Scheduled bookings,قيد مجدول
 scheduled bookings,قيد مجدول
+Scheduled bookings,قيد مجدول
 scheduled tasks,مهمة مجدولة
 Scrap Journal Entry,قيد الاستبعاد
 Scrapped,مستبعد (خردة)
