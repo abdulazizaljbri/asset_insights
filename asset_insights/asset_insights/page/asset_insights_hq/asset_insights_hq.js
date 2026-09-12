@@ -20,6 +20,16 @@ frappe.pages["asset-insights-hq"].on_page_load = function (wrapper) {
 		},
 	});
 
+	const drafts_field = page.add_field({
+		fieldname: "include_drafts",
+		label: __("Include Drafts"),
+		fieldtype: "Check",
+		default: 1,
+		change() {
+			load();
+		},
+	});
+
 	page.set_primary_action(__("Refresh"), () => load());
 	page.set_secondary_action(__("Workspace"), () =>
 		frappe.set_route("app/asset-insights")
@@ -115,7 +125,10 @@ frappe.pages["asset-insights-hq"].on_page_load = function (wrapper) {
 				args: {
 					report_name: report_name,
 					filters: Object.assign(
-						{ company: company_field.get_value() || undefined },
+						{
+							company: company_field.get_value() || undefined,
+							include_drafts: drafts_field.get_value() ? 1 : 0,
+						},
 						filters || {}
 					),
 				},
