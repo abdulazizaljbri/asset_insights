@@ -8,29 +8,6 @@ frappe.pages["asset-finance-hq"].on_page_load = function (wrapper) {
 		single_column: true,
 	});
 
-	const company_field = page.add_field({
-		fieldname: "company",
-		label: __("Company"),
-		fieldtype: "Link",
-		options: "Company",
-		default: frappe.defaults.get_user_default("Company"),
-		change() {
-			load();
-		},
-	});
-
-	const drafts_field = page.add_field({
-		fieldname: "include_drafts",
-		label: __("Include Drafts"),
-		fieldtype: "Check",
-		default: 1,
-		change() {
-			load();
-		},
-	});
-	if (!drafts_field.get_value()) {
-		drafts_field.set_value(1);
-	}
 
 	page.set_primary_action(__("Refresh"), () => load());
 	page.set_secondary_action(__("Workspace"), () =>
@@ -49,10 +26,20 @@ frappe.pages["asset-finance-hq"].on_page_load = function (wrapper) {
 		["kpi-disposed", __("Disposals (12m)"), "#ec8d30"],
 	];
 
-	const VERSION_MARKER = "Asset Finance HQ • v5";
+	const VERSION_MARKER = "Asset Finance HQ • v6";
 
 	main.innerHTML = `
 		<div class="ai-hq">
+			<div class="ai-controls">
+				<div class="ai-control">
+					<div class="ai-control-label">${__("Company")}</div>
+					<div id="ai-company-wrap"></div>
+				</div>
+				<label class="ai-control ai-switch">
+					<input type="checkbox" id="ai-drafts" checked>
+					<span>${__("Include Drafts")}</span>
+				</label>
+			</div>
 			<div id="ai-fhint" class="ai-hint" style="display:none"></div>
 			<div class="ai-kpis">
 				${KPI_SLOTS.map(
@@ -84,6 +71,20 @@ frappe.pages["asset-finance-hq"].on_page_load = function (wrapper) {
 			</div>
 			<div class="ai-version">${VERSION_MARKER}</div>
 		</div>`;
+
+	// in-body filter bar (always visible - page-head fields are hidden
+	// on some v15 builds, especially under RTL)
+	const company_control = new frappe.ui.form.ControlLink({
+		parent: wrapper.querySelector("#ai-company-wrap"),
+		df: {
+			fieldtype: "Link",
+			options: "Company",
+			fieldname: "company",
+		},
+	});
+	company_control.set_value(frappe.defaults.get_user_default("Company"));
+	company_control.$input.on("change", () => load());
+	wrapper.querySelector("#ai-drafts").addEventListener("change", () => load());
 
 	let currency = null;
 
@@ -132,8 +133,8 @@ frappe.pages["asset-finance-hq"].on_page_load = function (wrapper) {
 					report_name: report_name,
 					filters: Object.assign(
 						{
-							company: company_field.get_value() || undefined,
-							include_drafts: drafts_field.get_value() ? 1 : 0,
+							company: company_control.get_value() || undefined,
+							include_drafts: document.getElementById("ai-drafts").checked ? 1 : 0,
 						},
 						filters || {}
 					),

@@ -100,3 +100,39 @@
 	margin-bottom: 12px;
 	font-size: 12.5px;
 }
+
+/* v6: in-body filter bar */
+.ai-hq .ai-controls {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	align-items: stretch;
+	margin-bottom: 12px;
+}
+.ai-hq .ai-control {
+	background: var(--ai-card, #fff);
+	border: 1px solid var(--ai-line, #e6e8ee);
+	border-radius: 10px;
+	padding: 8px 12px;
+	min-width: 230px;
+}
+.ai-hq .ai-control-label {
+	color: var(--ai-muted, #6b7280);
+	font-size: 11px;
+	margin-bottom: 2px;
+}
+.ai-hq .ai-switch {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	font-size: 12.5px;
+	color: var(--ai-text, #1f2733);
+	cursor: pointer;
+	font-weight: 600;
+}
+.ai-hq .ai-switch input {
+	accent-color: #2490ef;
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+}
