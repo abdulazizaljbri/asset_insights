@@ -49,8 +49,8 @@ Asset Repair Register,سجل إصلاحات الأصول
 Asset Value Adjustment,تعديل قيمة الأصول
 Asset Value Adjustment Register,سجل تعديل قيم الأصول
 Asset Value Summary,ملخص قيم الأصول
-Assets,الأصول
 assets,أصول
+Assets,الأصول
 Assets by Category,الأصول حسب الفئة
 Assets In Maintenance,أصول تحت الصيانة
 Assets Nearing End Of Life,أصول قرب نهاية العمر
@@ -73,6 +73,7 @@ Count,العدد
 Current Asset Value,القيمة الحالية للأصل
 Custodian,المسؤول / العهدة
 Custodian Name,اسم المسؤول
+Custody Assignment,إسناد عهدة
 Date,التاريخ
 Days Until Due,الأيام حتى الاستحقاق
 Depreciation & Value,الإهلاك والقيم
@@ -170,8 +171,8 @@ Repair ID,رقم الإصلاح
 Repair Status,حالة الإصلاح
 Repairs,الإصلاحات
 Schedule Date,تاريخ الجدولة
-scheduled bookings,قيد مجدول
 Scheduled bookings,قيد مجدول
+scheduled bookings,قيد مجدول
 scheduled tasks,مهمة مجدولة
 Scrap Journal Entry,قيد الاستبعاد
 Scrapped,مستبعد (خردة)
@@ -194,6 +195,8 @@ Total Repair Cost,إجمالي تكلفة الإصلاح
 Transfer,تحويل
 Transfer and Issue,تحويل وصرف
 View,العرض
+Voucher No,رقم المستند
+Voucher Type,نوع المستند
 Within,خلال
 Within (months),خلال (شهور)
 within 12 months,خلال 12 شهر
