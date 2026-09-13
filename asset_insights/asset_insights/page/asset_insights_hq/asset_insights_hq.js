@@ -2,7 +2,7 @@
  * ERPNext v15 — verified APIs only:
  *   frappe.db.get_list, frappe.utils.escape_html, frappe.desk.query_report.run,
  *   frappe.Chart (bundled), plain HTML controls (no page-head fields,
- *   no ControlLink — both proved fragile on 15.26.0 / RTL).
+ *   plain HTML controls only (fragile alternatives avoided on 15.26.0 / RTL).
  * Drafts are ALWAYS included by default (sites running on unsubmitted docs).
  */
 
